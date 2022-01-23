@@ -34,7 +34,7 @@ const suppress = () => {
       return
     }
 
-    if (process.env.CYPRESS_INTERNAL_ENV === 'production') {
+    if (process.env.CYPRESS_INTERNAL_ENV === 'production' || process.env.CYPRESS_INTERNAL_ENV === 'development') {
       debug('suppressed emitWarning from node: %o', { process, warning, type, code, args })
 
       return
